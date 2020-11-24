@@ -21,11 +21,11 @@ Mosquitto คือ ​MQTT Broker อันดับต้น ๆ ที่ถ�
     mosquitto_pub -h localhost -t test -m "hello world"
 ```
 เมื่อเรียบร้อยแล้ว terminal แรกจะปรากฎข้อความ hello world ขึ้นมา ดังรูป
-[result.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/result.png)
+![result.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/result.png)
 
 #### การกำหนด username และ password ในการเข้าใช้ MQTT
 1. ทำการแก้ไขไฟล์ /etc/mosquitto/mosquitto.conf ให้เป็นดังนี้
-[mosquitto.conf.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/mosquitto.conf.png)
+![mosquitto.conf.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/mosquitto.conf.png)
 2. เพิ่ม username ไปยัง /etc/mosquitto/pwfile ที่กำหนดไว้ในขั้นตอนที่ 1 โดยใช้คำสั่ง
 ```
     sudo mosquitto_passwd -c /etc/mosquitto/pwfile username
@@ -94,9 +94,9 @@ Mosquitto คือ ​MQTT Broker อันดับต้น ๆ ที่ถ�
     node myMqtt
 ```
 จะปรากฎผลลัพธ์ดังรูป
-[myMqtt.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/myMqtt.png)
+![myMqtt.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/myMqtt.png)
 
 และหากมี subscriber ทำการ subscribe มายัง topic ที่มีชื่อว่า test แล้ว subscriber นั้นจะได้รับข้อความเหมือนดังรูปข้างต้น
 
 ในทางตรงกันข้ามหากมี publisher ทำการเชื่อมต่อมายัง topic test และทำการ publish ข้อความขึ้นมาแล้ว ข้อความดังกล่าวจะปรากฎในหน้า console เช่นเดียวกัน อันแสดงได้ดังรูป
-[myMqtt_1.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/myMqtt_1.png)
+![myMqtt_1.png](https://github.com/thanaponyalan/MQTTServer/blob/master/img/myMqtt_1.png)
